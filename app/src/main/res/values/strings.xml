@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ToolBoxApp</string>
+    <string name="valuta_home_title">VALUTA</string>
+    <string name="units_home_title">UNITS</string>
+</resources>

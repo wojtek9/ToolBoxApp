@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:rowCount="4"
+        android:padding="16dp"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/button_tool1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:text="@string/valuta_home_title"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_tool2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="@string/units_home_title"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_tool3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="Tool 3"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_tool4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="Tool 4"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_tool5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="Tool 5"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_tool6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="Tool 6"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_tool7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="Tool 7"
+            android:textAllCaps="false" />
+
+
+        <Button
+            android:id="@+id/button_tool8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="Tool 8"
+            android:textAllCaps="false" />
+
+    </GridLayout>
+</RelativeLayout>
