@@ -1,8 +1,10 @@
 package com.example.toolboxapp.components.valutatool
 
+import android.annotation.SuppressLint
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +13,7 @@ import com.example.toolboxapp.enums.Valuta
 
 class ValutaModel(private val activity: AppCompatActivity) {
     val controller = ValutaController()
-    val helper = Helper()
+    val helper = ValutaHelper()
 
     fun setupUI() {
         setupSpinnerValues()
@@ -22,7 +24,7 @@ class ValutaModel(private val activity: AppCompatActivity) {
         val fromSpinner = activity.findViewById<Spinner>(R.id.spinner)
         val toSpinner = activity.findViewById<Spinner>(R.id.spinner2)
 
-        val valutaNames = Valuta.entries.map { it.name }
+        val valutaNames = helper.getValutaNames()
         //val valutaNames = getSpinnerValutas()
         val adapter = ArrayAdapter(activity, android.R.layout.simple_spinner_item, valutaNames)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -36,6 +38,7 @@ class ValutaModel(private val activity: AppCompatActivity) {
         return nameAndSymbol
     }
 
+    @SuppressLint("DefaultLocale")
     private fun setupListeners() {
         val convertBtn = activity.findViewById<Button>(R.id.convert_btn)
         convertBtn.setOnClickListener {
@@ -45,7 +48,19 @@ class ValutaModel(private val activity: AppCompatActivity) {
             val toCurrency = activity.findViewById<Spinner>(R.id.spinner2).selectedItem.toString()
             val result = onConvertBtnClicked(amount, fromCurrency, toCurrency)
             val resultText = activity.findViewById<TextView>(R.id.result_text)
-            resultText.text = result.toString()
+            resultText.text = String.format("%.3f", result) //round to 3 decimals
+        }
+
+        val swapBtn = activity.findViewById<ImageButton>(R.id.valuta_swap_btn)
+        swapBtn.setOnClickListener {
+            val fromSpinner = activity.findViewById<Spinner>(R.id.spinner)
+            val toSpinner = activity.findViewById<Spinner>(R.id.spinner2)
+
+            val fromPosition = fromSpinner.selectedItemPosition
+            val toPosition = toSpinner.selectedItemPosition
+
+            fromSpinner.setSelection(toPosition)
+            toSpinner.setSelection(fromPosition)
         }
     }
 

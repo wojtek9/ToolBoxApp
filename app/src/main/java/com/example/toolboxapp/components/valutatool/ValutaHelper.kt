@@ -1,8 +1,9 @@
 package com.example.toolboxapp.components.valutatool
 
+import com.example.toolboxapp.enums.Valuta
 import java.util.Currency
 
-class Helper {
+class ValutaHelper {
 
     fun getValutaInstance(currency: String): Currency? {
         val inst = Currency.getInstance(currency)
@@ -23,5 +24,10 @@ class Helper {
             return inst.currencyCode
         }
         return "err"
+    }
+
+    fun getValutaNames(): List<String> {
+        val valutaNames = Valuta.entries.map { it.name }
+        return valutaNames
     }
 }
