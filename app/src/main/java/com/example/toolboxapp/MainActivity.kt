@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
+import com.example.toolboxapp.enums.ToolName
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,15 +12,31 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         findViewById<View>(R.id.button_tool1).setOnClickListener {
-            navigateToTool("tool1")
+            navigateToTool(ToolName.VALUTA.name)
         }
         findViewById<View>(R.id.button_tool2).setOnClickListener {
-            navigateToTool("tool2")
+            navigateToTool(ToolName.UNITS.name)
         }
-        // Repeat for tools 3 to 8
+        /*
+        findViewById<View>(R.id.button_tool3).setOnClickListener {
+            navigateToTool("tool3")
+        }
+        findViewById<View>(R.id.button_tool4).setOnClickListener {
+            navigateToTool("tool4")
+        }
+        findViewById<View>(R.id.button_tool5).setOnClickListener {
+            navigateToTool("tool5")
+        }
+        findViewById<View>(R.id.button_tool6).setOnClickListener {
+            navigateToTool("tool6")
+        }
+        findViewById<View>(R.id.button_tool7).setOnClickListener {
+            navigateToTool("tool7")
+        }
         findViewById<View>(R.id.button_tool8).setOnClickListener {
             navigateToTool("tool8")
         }
+        */
     }
 
     private fun navigateToTool(toolName: String) {

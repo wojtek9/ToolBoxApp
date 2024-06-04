@@ -7,8 +7,16 @@ enum class Valuta {
     EUR
 }
 
+enum class Units {
+    Millimeters,
+    Centimeters,
+    Meters,
+    Kilometers,
+    Miles,
+    Yards
+}
 
-
-enum class someothersht {
-
+enum class ToolName {
+    VALUTA,
+    UNITS
 }

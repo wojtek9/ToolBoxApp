@@ -34,6 +34,7 @@
             android:textAllCaps="false" />
 
         <Button
+            android:enabled="false"
             android:id="@+id/button_tool3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -43,6 +44,7 @@
             android:textAllCaps="false" />
 
         <Button
+            android:enabled="false"
             android:id="@+id/button_tool4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -52,6 +54,7 @@
             android:textAllCaps="false" />
 
         <Button
+            android:enabled="false"
             android:id="@+id/button_tool5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -61,6 +64,7 @@
             android:textAllCaps="false" />
 
         <Button
+            android:enabled="false"
             android:id="@+id/button_tool6"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -70,6 +74,7 @@
             android:textAllCaps="false" />
 
         <Button
+            android:enabled="false"
             android:id="@+id/button_tool7"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -80,6 +85,7 @@
 
 
         <Button
+            android:enabled="false"
             android:id="@+id/button_tool8"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
